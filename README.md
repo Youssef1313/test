@@ -47,8 +47,8 @@ public class StudentNotFoundException : Exception
 [Serializable]
 public class StudentNotFoundException : Exception
 {
-	public string StudentName { get; }
-	
+    public string StudentName { get; }
+
     public StudentNotFoundException()
     {
     }
@@ -75,7 +75,7 @@ public class StudentNotFoundException : Exception
 We have created our custom exception, and we can throw it anywhere in our code like the following:
 
 ```csharp
-	throw new StudentNotFoundException("The student cannot be found.", "John");
+throw new StudentNotFoundException("The student cannot be found.", "John");
 ```
 
 The previous line looks good, but its only problem is that `The student cannot be found.` is just a constant string, we want to have different messages depending on user culture.
