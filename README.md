@@ -66,7 +66,7 @@ public class StudentNotFoundException : Exception
     public StudentNotFoundException(string message, string studentName)
         : base(message)
     {
-		StudentName = studentName;
+        StudentName = studentName;
     }
 }
 ```
