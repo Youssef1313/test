@@ -2,7 +2,7 @@
 title: "How to: Create localized exception messages"
 description: "The article demonstrates how to create custom exceptions and localized exception messages"
 author: "Youssef1313"
-ms.date: 09/01/1999
+ms.date: 09/02/2019
 ---
 # Create custom exceptions
 The .NET Framework contains many different exceptions that are likely to happen. However, in some cases we need to create our own custom exceptions.
