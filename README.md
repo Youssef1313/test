@@ -81,9 +81,19 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
 The previous line looks good, but its only problem is that `The student cannot be found.` is just a constant string, we want to have different messages depending on user culture.
 We will do that by using [Satellite Assemblies](https://docs.microsoft.com/dotnet/framework/resources/creating-satellite-assemblies-for-desktop-apps).
 
+A satellite assembly is a `.dll` that contains resources for a specific language. When you ask for a specific resources at runtime, the CLR finds that resource depending on user culture. If no satellite assembly is found for that culture, the default resources file is used.
+
+
 To start creating the localized exception messages:
 - Create a new folder to hold the resource files, let's name the folder `Resources`.
-- Add a new resource file to it. To do that in Visual Studio, Right click the folder in solution explorer -> Add -> New Item -> Choose `Resources File` -> Name it `ExceptionMessages.resx`.
+- Add a new resource file to it. To do that in Visual Studio, Right click the folder in solution explorer -> Add -> New Item -> Choose `Resources File` -> Name it `ExceptionMessages.resx`. (This is the default resources file)
 - Add a Name Value pair for your exception messages like the following image shows:
 
-![image](https://user-images.githubusercontent.com/31348972/64116635-28ce3500-cd93-11e9-953e-6cefea27804b.png)
+![image](https://user-images.githubusercontent.com/31348972/64120930-ca5a8400-cd9d-11e9-984a-789c5f582513.png)
+
+- Add a new resource file for French. Name it `ExceptionMessages.fr-FR.resx`.
+- Add a Name Value pair of the exception messages again:
+
+![image](https://user-images.githubusercontent.com/31348972/64120995-ee1dca00-cd9d-11e9-9728-07b971bb6409.png)
+
+
