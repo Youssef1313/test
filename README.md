@@ -92,7 +92,7 @@ To start creating the localized exception messages:
 ![image](https://user-images.githubusercontent.com/31348972/64120930-ca5a8400-cd9d-11e9-984a-789c5f582513.png)
 
 - Add a new resource file for French. Name it `ExceptionMessages.fr-FR.resx`.
-- Add a Name Value pair of the exception messages again:
+- Add a Name Value pair of the exception messages again but with French value:
 
 ![image](https://user-images.githubusercontent.com/31348972/64120995-ee1dca00-cd9d-11e9-9728-07b971bb6409.png)
 
