@@ -96,4 +96,14 @@ To start creating the localized exception messages:
 
 ![image](https://user-images.githubusercontent.com/31348972/64120995-ee1dca00-cd9d-11e9-9728-07b971bb6409.png)
 
+- If you build the project and go `bin/Debug`, you will find a folder named `fr-FR` containing a `.dll` file, this is our satellite assembly.
 
+- When you want to  throw the exception, you do the following:
+
+```csharp
+var resourceManager = new ResourceManager("FULLY_QIALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly());
+throw new StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John")
+```
+
+> [!NOTE]
+> If our project name is `TestProject` and our resource file is called `ExceptionMessages.resx` and is inside a folder called `Resources` in the project, the fully qualified name will be `TestProject.Resources.ExceptionMessages`.
